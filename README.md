@@ -1,5 +1,5 @@
-## 2020cce
-# 基礎題：找零錢
+# 2020cce
+## 基礎題：找零錢
 ```c
 #include<stdio.h>
 int main()
@@ -9,7 +9,7 @@ int main()
 	printf("%d=50*%d+5*%d+1*%d\n",n,n/50,(n%50)/5,n%50%5);
 }
 ```
-# 基礎題：因數個數
+## 基礎題：因數個數
 ```c
 #include<stdio.h>
 int main()
@@ -23,7 +23,7 @@ int main()
 	printf("%d\n",ans);
 }
 ```
-# 基礎題：找倍數
+## 基礎題：找倍數
 ```c
 #include<stdio.h>
 int a[10];
@@ -38,7 +38,7 @@ int main()
 	printf("%d\n",ans);
 }
 ```
-# 基礎題：整數轉換為等級
+## 基礎題：整數轉換為等級
 ```c
 #include<stdio.h>
 int main()
@@ -51,7 +51,7 @@ int main()
     if (n<60) printf("F\n");
 }
 ```
-# 進階題：分式化簡
+## 進階題：分式化簡
 ```c
 #include<stdio.h>
 int main()
@@ -69,7 +69,7 @@ int main()
 	printf("%d %d\n",x/a,y/a);
 }
 ```
-# 進階題：讀入整數反序列印
+## 進階題：讀入整數反序列印
 ```c
 #include<stdio.h>
 int a[1000];
@@ -89,7 +89,7 @@ int main()
 	printf("\n");
 }
 ```
-# 進階題：A的B次方函數
+## 進階題：A的B次方函數
 ```c
 #include<stdio.h>
 int MYPOWER(int a,int b)
@@ -109,7 +109,7 @@ int main(void)
 		return 0;
 }
 ```
-# 進階題：漸增數列相加
+## 進階題：漸增數列相加
 ```c
 #include<stdio.h>
 int main()
