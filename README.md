@@ -56,17 +56,14 @@ int main()
 #include<stdio.h>
 int main()
 {
-	
-	int a,b,c;
+	int a,b;
 	scanf("%d%d",&a,&b);
-	int x=a,y=b;
-	while(b!=0)
+	int ans;
+	for(int i=1;i<=a;i++)
 	{
-		c=b;
-		b=a%b;
-		a=c;
+		if(a%i==0&&b%i==0) ans=i;
 	}
-	printf("%d %d\n",x/a,y/a);
+	printf("%d %d\n",a/ans,b/ans);
 }
 ```
 ## 進階題：讀入整數反序列印
