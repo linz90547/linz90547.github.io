@@ -392,4 +392,81 @@ int main()
 	}
 }
 ```
-##
+## 基礎題：N數之和
+```c
+#include<stdio.h>
+int a[10];
+int main()
+{
+	int n,ans=0;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++)
+	{
+		scanf("%d",&a[i]);
+		ans+=a[i];
+	}
+	printf("%d\n",ans);
+}
+```
+## 基礎題：三數極大
+```c
+#include<stdio.h>
+int main()
+{
+	int a,b,c,t;
+	scanf("%d%d%d",&a,&b,&c);
+	if(a<b)
+	{
+		t=b;
+		b=a;
+		a=t;
+	}
+	if(a<c)
+	{
+		t=c;
+		c=a;
+		a=t;
+	}
+	printf("%d\n",a);
+}
+```
+## 基礎題：計算商數
+```c
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	printf("%d\n",a/b);
+}
+```
+## 進階題：反序數字
+```c
+#include<stdio.h>
+int main()
+{
+	int n,sum=0;
+	scanf("%d",&n);
+	for(int i=n;i!=0;i/=10)
+	{
+		sum=(sum+i%10)*10;
+	}
+	printf("%d+%d=%d\n",n,sum/10,n+sum/10);
+}
+```
+## 進階題：絕對值函數
+```c
+#include<stdio.h>
+int f(int n)
+{
+	if(n<0) n=-n;
+	return n;
+}
+int main(void)
+{
+	int n;
+	scanf("%d",&n);
+	printf("[%d]",f(n));
+	return 0;
+}
+```
