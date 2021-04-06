@@ -470,3 +470,64 @@ int main(void)
 	return 0;
 }
 ```
+## 進階題：陣列找出現次數
+```c
+#include<stdio.h>
+int a[10];
+int main()
+{
+	int sum=0;
+	for(int i=1;i<=10;i++)
+	{
+		scanf("%d",&a[i]);
+		sum++;
+		if(a[i]==0)break;
+	}
+	int x,ans=0;
+	scanf("%d",&x);
+	for(int i=1;i<=sum-1;i++)
+	{
+		if(a[i]==x) ans++;
+	}
+	printf("%d\n",ans);
+}
+```
+## 進階題：判斷大小
+```c
+#include<stdio.h>
+int f(int a,int b)
+{
+	if(a>b)return 1;
+	if(a<b)return -1;
+	if(a==b)return 0;
+}
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d",f(a,b));
+    return 0;
+}
+```
+## 進階題：計算一列整數的總和
+```c
+#include<stdio.h>
+int a[100];
+int main()
+{
+	int sum=0;
+	for(int i=1;i<=100;i++)
+	{
+		printf("Enter an integer ( 999 to end ): \n");
+		scanf("%d",&a[i]);
+		sum++;
+		if(a[i]==999)break;
+	}
+	int ans=0;
+	for(int i=1;i<=sum-1;i++)
+	{
+		ans+=a[i];
+	}
+	printf("The total is: %d",ans);
+}
+```
