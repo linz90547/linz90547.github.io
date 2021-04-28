@@ -298,3 +298,50 @@ int main()
 	printf("The total is: %d",ans);
 }
 ```
+## 進階題：字串長度
+```c
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[100],b[100];
+	scanf("%s%s",a,b);
+	if(strlen(a)>strlen(b)) printf("1");
+	if(strlen(a)<strlen(b)) printf("-1");
+	if(strlen(a)==strlen(b)) 
+	{
+		if(a[0]>a[1]) printf("1");
+		else if(a[0]<a[1]) printf("-1");
+		else if(a[0]==a[1]) printf("0");
+	}
+}
+```
+## 進階題：判斷迴文
+```c
+#include<stdio.h>
+int main()
+{
+	char n[80];
+	scanf("%s",n);
+	int sum=0; 
+	for(int i=0;n[i]!=0;i++)
+	{
+		if(n[i]>='a') sum++;
+	}
+	
+	char a[80];
+	for(int i=0;i<sum;i++)
+	{
+		a[i]=n[i];
+	}
+	char b[80];
+	for(int i=sum-1;i>=0;i--)
+	{
+		b[i]=n[i];
+	}
+	if(a[0]==a[1]) printf("YES");
+	else if(a[80]==b[80]) printf("YES");
+	else printf("NO");
+	
+}
+```
