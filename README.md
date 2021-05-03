@@ -319,29 +319,21 @@ int main()
 ## 進階題：判斷迴文
 ```c
 #include<stdio.h>
+#include<string.h>
 int main()
 {
 	char n[80];
 	scanf("%s",n);
-	int sum=0; 
-	for(int i=0;n[i]!=0;i++)
+	int t=0; 
+	for(int i=0;i<strlen(n)/2;i++)
 	{
-		if(n[i]>='a') sum++;
+		if(n[i]!=n[strlen(n)-i-1])
+		{
+			t=1;
+			printf("NO");
+			break;
+		}
 	}
-	
-	char a[80];
-	for(int i=0;i<sum;i++)
-	{
-		a[i]=n[i];
-	}
-	char b[80];
-	for(int i=sum-1;i>=0;i--)
-	{
-		b[i]=n[i];
-	}
-	if(a[0]==a[1]) printf("YES");
-	else if(a[80]==b[80]) printf("YES");
-	else printf("NO");
-	
+	if(t==0) printf("YES");
 }
 ```
