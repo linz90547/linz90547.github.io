@@ -337,3 +337,20 @@ int main()
 	if(t==0) printf("YES");
 }
 ```
+## 基礎題：整數二元四則運算
+```c
+#include<stdio.h>
+int main()
+{
+	int a;
+	scanf("%d ",&a);
+	char c;
+	scanf("%c ",&c);
+	int b;
+	scanf("%d",&b);
+	if(c=='*')printf("%d",a*b);
+	if(c=='/')printf("%d",a/b);
+	if(c=='+')printf("%d",a+b);
+	if(c=='-')printf("%d",a-b);
+}
+```
